@@ -54,16 +54,16 @@ phishguard/
 ├── notebooks/          # Development and training logs (PhishGuard.ipynb)
 ├── phishguard_api.py   # Flask API for real-time inference
 └── requirements.txt    # Project dependencies
+```text
 
-🛠️ Installation & Setup
+## 🛠️ Installation & Setup
 Clone the Repository
 
-Bash
 git clone https://github.com/yourusername/phishguard.git
 cd phishguard
 Install Dependencies
 
-Bash
+
 pip install -r requirements.txt
 Initialize Models
 
@@ -81,7 +81,7 @@ Enable Developer Mode.
 
 Click Load Unpacked and select the extension/ folder.
 
-🌐 API Usage
+## 🌐 API Usage
 Analyze URL
 POST /analyse
 
@@ -97,17 +97,18 @@ JSON
   "url_score": 0.82,
   "html_score": 0.91
 }
-📈 Performance & Limitations
+
+##📈 Performance & Limitations
 Accuracy: The URL hybrid model achieves ~96% accuracy, while the BiLSTM content model reaches ~80%.
 
 Current Limitations: Accuracy is dependent on successful scraping; JavaScript-heavy sites may require further optimization.
 
-🔮 Future Roadmap
+## 🔮 Future Roadmap
 Integration of Transformer models (BERT) for better NLP analysis.
 
 Cloud-based deployment for global accessibility.
 
 Real-time threat intelligence feed integration.
 
-📜 License
+##📜 License
 This project is licensed under the MIT License.
