@@ -54,3 +54,60 @@ phishguard/
 ├── notebooks/          # Development and training logs (PhishGuard.ipynb)
 ├── phishguard_api.py   # Flask API for real-time inference
 └── requirements.txt    # Project dependencies
+
+🛠️ Installation & Setup
+Clone the Repository
+
+Bash
+git clone https://github.com/yourusername/phishguard.git
+cd phishguard
+Install Dependencies
+
+Bash
+pip install -r requirements.txt
+Initialize Models
+
+Ensure all trained model files (url_cnn_model.keras, hybrid_url_model.pkl, etc.) are placed within the /models/ directory as specified in the project structure.
+
+Run the API
+
+Bash
+python phishguard_api.py
+Chrome Extension Setup
+
+Open chrome://extensions/ in your browser.
+
+Enable Developer Mode.
+
+Click Load Unpacked and select the extension/ folder.
+
+🌐 API Usage
+Analyze URL
+POST /analyse
+
+JSON
+{
+  "url": "https://example-phishing-site.com"
+}
+Response
+JSON
+{
+  "verdict": "PHISHING",
+  "confidence": 0.87,
+  "url_score": 0.82,
+  "html_score": 0.91
+}
+📈 Performance & Limitations
+Accuracy: The URL hybrid model achieves ~96% accuracy, while the BiLSTM content model reaches ~80%.
+
+Current Limitations: Accuracy is dependent on successful scraping; JavaScript-heavy sites may require further optimization.
+
+🔮 Future Roadmap
+Integration of Transformer models (BERT) for better NLP analysis.
+
+Cloud-based deployment for global accessibility.
+
+Real-time threat intelligence feed integration.
+
+📜 License
+This project is licensed under the MIT License.
